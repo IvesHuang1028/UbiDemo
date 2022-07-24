@@ -1,5 +1,7 @@
 package com.demo.airpollution.activity;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.demo.airpollution.Constant.AirPollutionData;
 import com.demo.airpollution.Interface.ICtrl;
 import com.demo.airpollution.Interface.IHttpPost;

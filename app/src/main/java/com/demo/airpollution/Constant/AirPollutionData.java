@@ -71,4 +71,10 @@ public class AirPollutionData {
             MyLog.e(TAG, "json format error : " + e.getMessage());
         }
     }
+    public ArrayList<AirPollution> getAirUpperList(){
+        return airUperList;
+    }
+    public ArrayList<AirPollution> getAirLowerList(){
+        return airLowerList;
+    }
 }
