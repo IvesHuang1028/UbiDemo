@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cl_upper"
-    android:layout_width="140dp"
+    android:layout_width="160dp"
     android:layout_height="65dp"
     android:background="@color/black">
 
     <ImageView
-        android:layout_width="136dp"
+        android:layout_width="156dp"
         android:layout_height="61dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
@@ -66,10 +66,10 @@
         android:id="@+id/tv_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
         android:text="良好"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_country"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

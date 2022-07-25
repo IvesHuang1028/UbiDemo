@@ -29,6 +29,7 @@ public class AirPollutionActivity extends BaseActivity implements View.OnClickLi
     ProgressDialog dialog;
     RecyclerView recycle_upper,recycle_lower;
     UpperRecycleAdapter adapter_upper;
+    LowerRecycleAdapter adapter_lower;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,11 @@ public class AirPollutionActivity extends BaseActivity implements View.OnClickLi
         recycle_upper.setLayoutManager(manager);
         recycle_upper.setAdapter(adapter_upper);
         recycle_upper.addItemDecoration(new SpacesItemDecoration(20));
+
+        recycle_lower = findViewById(R.id.recycler_lower);
+        adapter_lower = new LowerRecycleAdapter(this,AirPollutionData.getInstance().getAirLowerList(),this);
+        recycle_lower.setLayoutManager(new LinearLayoutManager(this));
+        recycle_lower.setAdapter(adapter_lower);
     }
     @Override
     public void onClick(View view) {
