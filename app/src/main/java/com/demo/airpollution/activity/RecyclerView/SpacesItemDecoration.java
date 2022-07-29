@@ -1,4 +1,4 @@
-package com.demo.airpollution.activity;
+package com.demo.airpollution.activity.RecyclerView;
 
 import android.graphics.Rect;
 import android.view.View;

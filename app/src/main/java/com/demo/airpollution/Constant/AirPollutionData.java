@@ -17,6 +17,7 @@ import java.util.ArrayList;
  */
 public class AirPollutionData {
     private String TAG = this.getClass().getSimpleName();
+    ArrayList<AirPollution> airAllList;
     ArrayList<AirPollution> airUperList;
     ArrayList<AirPollution> airLowerList;
     int threshold = 10;
@@ -24,6 +25,7 @@ public class AirPollutionData {
     public static synchronized AirPollutionData getInstance() {
         if (null == mInstance) {
             mInstance = new AirPollutionData();
+            mInstance.airAllList = new ArrayList<AirPollution>();
             mInstance.airUperList = new ArrayList<AirPollution>();
             mInstance.airLowerList = new ArrayList<AirPollution>();
         }
@@ -35,11 +37,14 @@ public class AirPollutionData {
             mInstance.airUperList = null;
             mInstance.airLowerList.clear();
             mInstance.airLowerList = null;
+            mInstance.airAllList.clear();
+            mInstance.airAllList = null;
             mInstance = null;
         }
     }
     public void parserData(String jsonarray){
         try {
+            airAllList.clear();
             airUperList.clear();
             airLowerList.clear();
             JSONArray array = new JSONArray(jsonarray);
@@ -66,6 +71,7 @@ public class AirPollutionData {
                     airUperList.add(data);
                 else
                     airLowerList.add(data);
+                airAllList.add(data);
             }
         }catch(JSONException e){
             MyLog.e(TAG, "json format error : " + e.getMessage());
@@ -77,4 +83,5 @@ public class AirPollutionData {
     public ArrayList<AirPollution> getAirLowerList(){
         return airLowerList;
     }
+    public ArrayList<AirPollution> getAirAllList() {return airAllList;}
 }

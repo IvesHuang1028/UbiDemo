@@ -10,4 +10,5 @@ import android.view.View;
 public interface IAdapter {
     void onButtonClick(View view , int position);
     void onEditorAction();
+    void onSearchResult(String searchtext,int resultcount);
 }

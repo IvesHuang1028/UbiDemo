@@ -1,4 +1,4 @@
-package com.demo.airpollution.activity;
+package com.demo.airpollution.activity.RecyclerView;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.demo.airpollution.Interface.IAdapter;
 import com.demo.airpollution.MyLog;
 import com.demo.airpollution.R;
+import com.demo.airpollution.activity.AirPollution;
 
 import java.util.ArrayList;
 
